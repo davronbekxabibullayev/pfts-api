@@ -1,8 +1,8 @@
-namespace Pfts.Infrastucture;
+namespace Pfts.Infrastructure;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Pfts.Infrastucture.Persistence.EntityFramework.Extensions;
+using Pfts.Infrastructure.Persistance.EntityFramework.Extensions;
 
 public static class DependencyInjectionExtensions
 {
@@ -10,7 +10,7 @@ public static class DependencyInjectionExtensions
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        services.AddApplicationPersistence(configuration);
+        services.AddApplicationPersistance(configuration);
 
         return services;
     }

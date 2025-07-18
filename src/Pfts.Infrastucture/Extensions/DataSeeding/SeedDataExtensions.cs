@@ -1,8 +1,8 @@
-/*namespace Pfts.Infrastucture.Extensions.DataSeeding;
+/*namespace Pfts.Infrastructure.Extensions.DataSeeding;
 
 using System;
 using AutoMapper;
-using Pfts.Infrastucture.Persistence.EntityFramework;
+using Pfts.Infrastructure.Persistance.EntityFramework;
 
 public static class SeedDataExtensions
 {

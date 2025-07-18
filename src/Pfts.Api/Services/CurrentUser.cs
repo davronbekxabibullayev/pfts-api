@@ -2,7 +2,7 @@ namespace Pfts.Api.Services;
 
 using Pfts.Domain.Exceptions;
 using Pfts.Application.Common;
-using Pfts.Infrastucture.Extensions;
+using Pfts.Infrastructure.Extensions;
 
 public sealed class CurrentUser(IHttpContextAccessor httpContextAccessor) : ICurrentUser
 {

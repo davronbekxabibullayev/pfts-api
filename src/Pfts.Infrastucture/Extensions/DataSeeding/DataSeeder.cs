@@ -1,4 +1,4 @@
-/*namespace Pfts.Infrastucture.Extensions.DataSeeding;
+/*namespace Pfts.Infrastructure.Extensions.DataSeeding;
 
 using System.Data;
 

@@ -1,4 +1,4 @@
-namespace Pfts.Infrastucture.Extensions.DataSeeding.Role;
+namespace Pfts.Infrastructure.Extensions.DataSeeding.Role;
 
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Pfts.Domain.Models;
-using Pfts.Infrastucture.Common.Constants;
-using Pfts.Infrastucture.Persistence.EntityFramework;
-using static Pfts.Infrastucture.Common.Constants.Permissions;
+using Pfts.Infrastructure.Common.Constants;
+using Pfts.Infrastructure.Persistance.EntityFramework;
+using static Pfts.Infrastructure.Common.Constants.Permissions;
 
 public class InitialRolesUserSeed
 {

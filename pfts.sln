@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pfts.Application", "src\Pft
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pfts.Domain", "src\Pfts.Domain\Pfts.Domain.csproj", "{4555C9E8-ED1C-44BE-A249-4920E1918F3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pfts.Infrastucture", "src\Pfts.Infrastucture\Pfts.Infrastucture.csproj", "{F83F66CC-5001-4C1A-86FE-02BA594EDB04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pfts.Infrastructure", "src\Pfts.Infrastucture\Pfts.Infrastructure.csproj", "{F83F66CC-5001-4C1A-86FE-02BA594EDB04}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C1A27F7-FC6A-4F37-BD45-AA39987DCDA0}"
 	ProjectSection(SolutionItems) = preProject

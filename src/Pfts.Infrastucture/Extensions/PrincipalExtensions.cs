@@ -1,10 +1,10 @@
-namespace Pfts.Infrastucture.Extensions;
+namespace Pfts.Infrastructure.Extensions;
 
 using System;
 using System.Security.Claims;
 using System.Security.Principal;
 using IdentityModel;
-using Pfts.Infrastucture.Common.Constants;
+using Pfts.Infrastructure.Common.Constants;
 
 public static class PrincipalExtensions
 {

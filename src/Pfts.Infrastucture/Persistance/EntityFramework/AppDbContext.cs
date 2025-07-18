@@ -1,4 +1,4 @@
-namespace Pfts.Infrastucture.Persistence.EntityFramework;
+namespace Pfts.Infrastructure.Persistance.EntityFramework;
 
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Pfts.Application.Common;
 using Pfts.Domain.Models;
 using global::EntityFramework.Exceptions.PostgreSQL;
-using Pfts.Infrastucture.Persistence.EntityFramework.Extensions;
+using Pfts.Infrastructure.Persistance.EntityFramework.Extensions;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options)
     : IdentityDbContext<User, Role, Guid>(options), IAppDbContext

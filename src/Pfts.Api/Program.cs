@@ -1,13 +1,11 @@
-using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Pfts.Api.Extensions;
 using Pfts.Api.Localization.Extensions;
 using Pfts.Api.Middlewares;
 using Pfts.Application;
-using Pfts.Domain.Models;
-using Pfts.Infrastucture;
-using Pfts.Infrastucture.Extensions.DataSeeding.Role;
-using Pfts.Infrastucture.Persistence.EntityFramework;
+using Pfts.Infrastructure;
+using Pfts.Infrastructure.Extensions.DataSeeding.Role;
+using Pfts.Infrastructure.Persistance.EntityFramework;
 
 Console.Title = "Pfts.Api";
 
@@ -39,19 +37,16 @@ app.UseRequestLocalization();
 app.UseAuthentication();
 app.UseAuthorization();
 
-//app.MapGroup("account").MapIdentityApi<User>();
 app.MapControllers();
 
 app.Run();
 
-static async void MigrateDatabase(IHost host)
+static void MigrateDatabase(IHost host)
 {
     using var scope = host.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
     var provider = scope.ServiceProvider;
-
-    var mapper = provider.GetService<IMapper>();
 
     db.Database.Migrate();
 

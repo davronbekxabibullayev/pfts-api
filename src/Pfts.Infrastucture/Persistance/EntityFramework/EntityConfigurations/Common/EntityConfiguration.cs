@@ -1,4 +1,4 @@
-namespace Pfts.Infrastucture.Persistence.EntityFramework.EntityConfigurations.Common;
+namespace Pfts.Infrastructure.Persistance.EntityFramework.EntityConfigurations.Common;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

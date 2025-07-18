@@ -1,4 +1,4 @@
-namespace Pfts.Infrastucture.Persistence.EntityFramework.Extensions;
+namespace Pfts.Infrastructure.Persistance.EntityFramework.Extensions;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,7 +8,7 @@ using Pfts.Application.Common;
 
 public static class DependencyInjectionExtensions
 {
-    public static IServiceCollection AddApplicationPersistence(this IServiceCollection services, IConfiguration config)
+    public static IServiceCollection AddApplicationPersistance(this IServiceCollection services, IConfiguration config)
     {
         var connectionString = config.GetConnectionString("DefaultConnection");
 

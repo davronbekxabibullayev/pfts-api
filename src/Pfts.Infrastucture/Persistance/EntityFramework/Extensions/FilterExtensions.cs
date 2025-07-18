@@ -1,4 +1,4 @@
-namespace Pfts.Infrastucture.Persistence.EntityFramework.Extensions;
+namespace Pfts.Infrastructure.Persistance.EntityFramework.Extensions;
 
 using Microsoft.EntityFrameworkCore;
 using Pfts.Domain.Common;
@@ -36,4 +36,27 @@ public static class FilterExtensions
 
         return modelBuilder;
     }
+    public static ModelBuilder ConfigureLocalizableEntities(this ModelBuilder modelBuilder)
+    {
+        foreach (var type in modelBuilder.Model.GetEntityTypes())
+        {
+            if (typeof(IEntity).IsAssignableFrom(type.ClrType))
+                modelBuilder.ConfigureEnitity(type.ClrType);
+        }
+
+        return modelBuilder;
+    }
+
+    public static ModelBuilder ConfigureEnitity(this ModelBuilder modelBuilder, Type entityType)
+    {
+        ConfigureLocalizableEnitityMethod.MakeGenericMethod(entityType)
+            .Invoke(null, [modelBuilder]);
+
+        return modelBuilder;
+    }
+
+    public static readonly MethodInfo ConfigureLocalizableEnitityMethod = typeof(FilterExtensions)
+              .GetMethods(BindingFlags.Public | BindingFlags.Static)
+              .Single(t => t.IsGenericMethod && t.Name == nameof(ConfigureEnitity));
+
 }

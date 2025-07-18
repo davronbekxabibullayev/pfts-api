@@ -1,4 +1,4 @@
-namespace Pfts.Infrastucture.Common.Constants;
+namespace Pfts.Infrastructure.Common.Constants;
 
 public static class RoleNames
 {

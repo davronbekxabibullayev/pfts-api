@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Pfts.Domain.Models;
-using Pfts.Infrastucture.Persistence.EntityFramework;
+using Pfts.Infrastructure.Persistance.EntityFramework;
 
 public static class AuthenticationExtensions
 {

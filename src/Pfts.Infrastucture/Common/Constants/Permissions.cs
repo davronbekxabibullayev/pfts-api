@@ -1,4 +1,4 @@
-namespace Pfts.Infrastucture.Common.Constants;
+namespace Pfts.Infrastructure.Common.Constants;
 
 public readonly struct PermissionInfo(string key, string group, string displayName, string displayNameRu, string displayNameKa, string displayNameEn)
 {

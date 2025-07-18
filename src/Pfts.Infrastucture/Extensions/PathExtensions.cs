@@ -1,4 +1,4 @@
-namespace Pfts.Infrastucture.Extensions;
+namespace Pfts.Infrastructure.Extensions;
 
 public static class PathExtensions
 {
