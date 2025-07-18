@@ -20,8 +20,5 @@ public sealed class RegisterRequest
     /// </summary>
     public required string Password { get; init; }
 
-    /// <summary>
-    /// Employee's Id 
-    /// </summary>
-    public Guid? EmployeeId { get; init; }
+    public required string PhoneNumber { get; init; }
 }

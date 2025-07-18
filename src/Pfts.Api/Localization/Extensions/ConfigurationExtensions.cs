@@ -32,7 +32,7 @@ public static class ConfigurationExtensions
         return services;
     }
 
-    public static IServiceCollection AddDevhubLocalization(this IServiceCollection services, IConfiguration config)
+    public static IServiceCollection AddLocalization(this IServiceCollection services, IConfiguration config)
     {
         services.AddCoreLocalization(options =>
         {

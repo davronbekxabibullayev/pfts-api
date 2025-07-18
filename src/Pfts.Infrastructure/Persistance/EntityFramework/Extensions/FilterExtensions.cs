@@ -60,3 +60,4 @@ public static class FilterExtensions
               .Single(t => t.IsGenericMethod && t.Name == nameof(ConfigureEnitity));
 
 }
+

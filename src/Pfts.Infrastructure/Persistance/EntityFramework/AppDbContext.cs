@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Threading;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Pfts.Application.Common;
 using Pfts.Domain.Models;
 using global::EntityFramework.Exceptions.PostgreSQL;
+using Pfts.Infrastructure.Persistance;
 using Pfts.Infrastructure.Persistance.EntityFramework.Extensions;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options)
@@ -16,6 +16,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
     public DbSet<Category> Categories { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
     public DbSet<AuditLog> AuditLogs { get; set; }
+    public override DbSet<Role> Roles { get; set; }
+    public override DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -29,7 +31,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-        modelBuilder.SetSoftDeleteFilter();
+        //modelBuilder.SetSoftDeleteFilter();
     }
 
     public override int SaveChanges()

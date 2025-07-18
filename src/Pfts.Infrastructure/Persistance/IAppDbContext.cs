@@ -1,5 +1,6 @@
-namespace Pfts.Application.Common;
+namespace Pfts.Infrastructure.Persistance;
 
+using Pfts.Application.Common;
 using Microsoft.EntityFrameworkCore;
 using Pfts.Domain.Models;
 

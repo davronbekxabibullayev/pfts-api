@@ -39,6 +39,7 @@ public class AuthService(
         var user = new User();
         await userStore.SetUserNameAsync(user, userName, CancellationToken.None);
         await emailStore.SetEmailAsync(user, email, CancellationToken.None);
+
         var result = await userManager.CreateAsync(user, registration.Password);
 
         return result;
