@@ -41,4 +41,8 @@ public sealed class CurrentUser(IHttpContextAccessor httpContextAccessor) : ICur
     }
 
     public bool IsAuthenticated => _httpContextAccessor.HttpContext?.User?.Identity?.IsAuthenticated ?? false;
+
+    public Guid EmployeeId => throw new NotImplementedException();
+
+    public Guid OrganizationId => throw new NotImplementedException();
 }

@@ -1,6 +1,7 @@
 namespace Pfts.Api.Extensions;
 
 using System.Reflection;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Pfts.Api.Utils.OpenApi;
@@ -16,8 +17,8 @@ public static class SwaggerConfiguration
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Ravm.Api",
-                    Description = "An ASP.NET Core Web API for managing Ravm.Api items",
+                    Title = "Pfts.Api",
+                    Description = "An ASP.NET Core Web API for managing Pfts.Api items",
                     TermsOfService = new Uri("http://localhost:5175/")
                 });
 

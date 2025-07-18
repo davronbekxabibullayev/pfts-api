@@ -1,3 +1,11 @@
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using Pfts.Api.Extensions;
+using Pfts.Api.Localization.Extensions;
+using Pfts.Api.Middlewares;
+using Pfts.Application;
+using Pfts.Domain.Models;
+using Pfts.Infrastucture;
 using Pfts.Infrastucture.Extensions.DataSeeding.Role;
 using Pfts.Infrastucture.Persistence.EntityFramework;
 
@@ -46,7 +54,7 @@ static async void MigrateDatabase(IHost host)
     var mapper = provider.GetService<IMapper>();
 
     db.Database.Migrate();
-    db.SeedAsync(mapper);
+
     new InitialRolesUserSeed()
             .SeedAsync(db, provider)
             .Wait();
