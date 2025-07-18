@@ -1,4 +1,4 @@
-namespace Pfts.Application.Common;
+namespace Pfts.Infrastructure.Persistance;
 
 using Microsoft.EntityFrameworkCore.Infrastructure;
 

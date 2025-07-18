@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Pfts.Domain.Models;
-using global::EntityFramework.Exceptions.PostgreSQL;
 using Pfts.Infrastructure.Persistance;
-using Pfts.Infrastructure.Persistance.EntityFramework.Extensions;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options)
     : IdentityDbContext<User, Role, Guid>(options), IAppDbContext

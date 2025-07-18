@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pfts.Application\Pfts.Application.csproj" />
     <ProjectReference Include="..\Pfts.Domain\Pfts.Domain.csproj" />
   </ItemGroup>
 
