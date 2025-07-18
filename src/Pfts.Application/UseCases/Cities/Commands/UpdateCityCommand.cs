@@ -1,4 +1,4 @@
-namespace Pfts.Application.UseCases.Cities.Commands;
+/*namespace Pfts.Application.UseCases.Cities.Commands;
 
 using Microsoft.EntityFrameworkCore;
 using Pfts.Application.Common;
@@ -34,3 +34,4 @@ internal class UpdateCityCommandHandler(IAppDbContext dbContext, IMapper mapper)
                     .FirstOrDefaultAsync(w => w.Id == id);
     }
 }
+*/

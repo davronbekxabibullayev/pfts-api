@@ -1,4 +1,4 @@
-namespace Pfts.Infrastucture.Extensions.DataSeeding;
+/*namespace Pfts.Infrastucture.Extensions.DataSeeding;
 
 using System.Data;
 
@@ -31,3 +31,4 @@ public static class DataSeeder
         return result;
     }
 }
+*/

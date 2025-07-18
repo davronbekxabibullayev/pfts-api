@@ -1,4 +1,4 @@
-namespace Pfts.Api.Options;
+namespace Pfts.Api.Localization.Options;
 
 public class LocalizationOptions
 {

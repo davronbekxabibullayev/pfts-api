@@ -1,12 +1,14 @@
 namespace Pfts.Infrastucture.Extensions.DataSeeding.Role;
 
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Ravm.Infrastructure.Persistence.EntityFramework;
-using Ravm.Infrastructure.Common.Constants;
-using static Ravm.Infrastructure.Common.Constants.Permissions;
+using Pfts.Domain.Models;
+using Pfts.Infrastucture.Common.Constants;
+using Pfts.Infrastucture.Persistence.EntityFramework;
+using static Pfts.Infrastucture.Common.Constants.Permissions;
 
 public class InitialRolesUserSeed
 {
@@ -77,42 +79,6 @@ public class InitialRolesUserSeed
         if (role.Name == Roles.Admin.Name)
         {
             yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.Logs, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.ManagingRoles, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.ManagementOrganization, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.UserAccountsRegionalAdministratorsCreate, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.DirectoryManagement, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.ManageSettings, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.ManagingRoles, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Dispatcher.ManagmentOrganizationTransports, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Doctor.MenegmentDoctorConclusion, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Mechanic.MenegmentMechanicConclusion, RoleId = role.Id };
-        }
-
-        if (role.Name == Roles.OrganizationAdmin.Name)
-        {
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.Logs, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.ManagmentOrganizationEmployees, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.UserAccountsRegionalAdministratorsCreate, RoleId = role.Id };
-        }
-
-
-        if (role.Name == Roles.Dispatcher.Name)
-        {
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Dispatcher.ManagmentOrganizationTransports, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.Logs, RoleId = role.Id };
-        }
-
-
-        if (role.Name == Roles.Doctor.Name)
-        {
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Doctor.MenegmentDoctorConclusion, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.Logs, RoleId = role.Id };
-        }
-
-        if (role.Name == Roles.Mechanic.Name)
-        {
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Mechanic.MenegmentMechanicConclusion, RoleId = role.Id };
-            yield return new IdentityRoleClaim<Guid> { ClaimType = ApplicationClaimTypes.Permission, ClaimValue = Admin.Logs, RoleId = role.Id };
         }
 
         if (role.Name == Roles.Driver.Name)
@@ -136,8 +102,6 @@ public class InitialRolesUserSeed
             NormalizedEmail = "BEPRO@INFO.UZ",
             SecurityStamp = Guid.NewGuid().ToString("D"),
             ConcurrencyStamp = "fcd781ef-affc-4020-ab02-f636b3db4c23",
-            OrganizationId = Guid.Parse("6B34439F-4FAE-450E-93A2-16A280C2BF31"),
-            EmployeeId = Guid.Parse("745F5930-49A7-4191-B64D-65719AFD7239")
         };
 
         adminUser.PasswordHash = passwordHasher.HashPassword(adminUser, "123456Test$");

@@ -1,4 +1,4 @@
-namespace Pfts.Application.UseCases.Cities.Validators;
+/*namespace Pfts.Application.UseCases.Cities.Validators;
 
 using FluentValidation;
 using Pfts.Application.UseCases.Cities.Commands;
@@ -13,3 +13,4 @@ public class UpdateCityCommandValidator : AbstractValidator<UpdateCityCommand>
         RuleFor(x => x.NameRu).NotEmpty();
     }
 }
+*/

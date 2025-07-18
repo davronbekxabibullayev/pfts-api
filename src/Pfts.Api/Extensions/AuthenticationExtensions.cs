@@ -3,6 +3,8 @@ namespace Pfts.Api.Extensions;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using Pfts.Domain.Models;
+using Pfts.Infrastucture.Persistence.EntityFramework;
 
 public static class AuthenticationExtensions
 {

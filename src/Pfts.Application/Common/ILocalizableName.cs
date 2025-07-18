@@ -1,8 +1,8 @@
 namespace Pfts.Application.Common;
 public interface ILocalizableName
 {
-    string Name { get; set; }
-    string NameRu { get; set; }
-    string? NameUz { get; set; }
-    string? NameKa { get; set; }
+    public string Name { get; set; }
+    public string NameRu { get; set; }
+    public string? NameUz { get; set; }
+    public string? NameKa { get; set; }
 }

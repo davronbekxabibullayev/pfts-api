@@ -14,7 +14,6 @@ internal static class DependencyInjectionExtensions
         services.AddApplicationApiCORS();
 
         services.AddTransient<IAuthService, AuthService>();
-        services.AddTransient<IUserService, UserService>();
 
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

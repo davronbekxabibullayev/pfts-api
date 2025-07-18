@@ -1,4 +1,4 @@
-namespace Pfts.Infrastucture.Extensions.DataSeeding;
+/*namespace Pfts.Infrastucture.Extensions.DataSeeding;
 
 using System.Data;
 using ClosedXML.Excel;
@@ -62,3 +62,4 @@ public class ExcelFileUtils
         return dt;
     }
 }
+*/

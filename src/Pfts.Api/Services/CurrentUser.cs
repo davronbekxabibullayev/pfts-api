@@ -19,28 +19,6 @@ public sealed class CurrentUser(IHttpContextAccessor httpContextAccessor) : ICur
         }
     }
 
-    public Guid EmployeeId
-    {
-        get
-        {
-            if (!Guid.TryParse(_httpContextAccessor.HttpContext?.User?.Identity?.GetSubjectEmployeeId(), out var employeeId))
-                throw new AccessDeniedException();
-
-            return employeeId;
-        }
-    }
-
-    public Guid OrganizationId
-    {
-        get
-        {
-            if (!Guid.TryParse(_httpContextAccessor.HttpContext?.User?.Identity?.GetSubjectOrganizationId(), out var organizationId))
-                throw new AccessDeniedException();
-
-            return organizationId;
-        }
-    }
-
     public string[] Roles
     {
         get

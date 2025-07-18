@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 
 public interface IDbContext
 {
-    int SaveChanges();
-    Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
-    DatabaseFacade Database { get; }
+    public int SaveChanges();
+    public Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+    public DatabaseFacade Database { get; }
 }

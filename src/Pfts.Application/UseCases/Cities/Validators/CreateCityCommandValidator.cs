@@ -1,4 +1,4 @@
-namespace Pfts.Application.UseCases.Cities.Validators;
+/*namespace Pfts.Application.UseCases.Cities.Validators;
 
 using Pfts.Application.UseCases.Cities.Commands;
 
@@ -12,3 +12,4 @@ public class CreateCityCommandValidator : AbstractValidator<CreateCityCommand>
         RuleFor(x => x.NameRu).NotEmpty();
     }
 }
+*/

@@ -1,4 +1,6 @@
-namespace Pfts.Application.UseCases.Cities.Commands;
+/*namespace Pfts.Application.UseCases.Cities.Commands;
+
+using Pfts.Application.Common;
 
 public record CreateCityCommand : IRequest
 {
@@ -35,3 +37,4 @@ internal class CreateCityCommandHandler(IAppDbContext dbContext) : IRequestHandl
         };
     }
 }
+*/

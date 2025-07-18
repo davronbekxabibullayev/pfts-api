@@ -1,6 +1,8 @@
-namespace Pfts.Application.UseCases.Cities.Commands;
+/*namespace Pfts.Application.UseCases.Cities.Commands;
 
 using Microsoft.EntityFrameworkCore;
+using Pfts.Application.Common;
+using Pfts.Domain.Exceptions;
 
 public record DeleteCityCommand(Guid Id) : IRequest;
 
@@ -14,7 +16,9 @@ internal class DeleteCityCommandHandler(IAppDbContext dbContext) : IRequestHandl
 
         if (deletedRows == 0)
         {
+
             throw new NotFoundException(nameof(City), request.Id);
         }
     }
 }
+*/

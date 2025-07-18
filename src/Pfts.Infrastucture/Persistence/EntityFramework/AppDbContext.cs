@@ -10,7 +10,8 @@ using Pfts.Domain.Models;
 using global::EntityFramework.Exceptions.PostgreSQL;
 using Pfts.Infrastucture.Persistence.EntityFramework.Extensions;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbContext<User, Role, Guid>(options), IAppDbContext
+public class AppDbContext(DbContextOptions<AppDbContext> options)
+    : IdentityDbContext<User, Role, Guid>(options), IAppDbContext
 {
     public DbSet<Category> Categories { get; set; }
     public DbSet<Transaction> Transactions { get; set; }

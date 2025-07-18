@@ -1,4 +1,4 @@
-namespace Pfts.Application.UseCases.Cities.Queries;
+/*namespace Pfts.Application.UseCases.Cities.Queries;
 
 using Microsoft.EntityFrameworkCore;
 using Pfts.Application.Common;
@@ -20,3 +20,4 @@ internal sealed class GetCityQueryHandler(IAppDbContext dbContext, IMapper mappe
         return mapper.Map<CityModel>(city);
     }
 }
+*/

@@ -1,8 +1,3 @@
-global using Ravm.Application.Common;
-global using Ravm.Domain.Models;
-global using Ravm.Domain.Exceptions;
-global using Devhub.Common.Paging;
-global using Devhub.Common.Paging.AutoMapper;
 global using MediatR;
 global using AutoMapper;
 global using AutoMapper.QueryableExtensions;

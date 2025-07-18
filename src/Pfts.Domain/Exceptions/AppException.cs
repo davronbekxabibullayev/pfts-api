@@ -7,7 +7,7 @@ public class AppException : Exception
 {
     public string MessageFormat { get; } = string.Empty;
 
-    public object[] Args { get; } = Array.Empty<object>();
+    public object[] Args { get; } = [];
 
     protected AppException()
     {

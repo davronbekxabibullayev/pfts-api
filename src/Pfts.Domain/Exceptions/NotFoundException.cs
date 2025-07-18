@@ -21,7 +21,7 @@ public class NotFoundException : AppException
     {
     }
 
-    public NotFoundException(string resourceName, string propertyName , object resourceKey)
+    public NotFoundException(string resourceName, string propertyName, object resourceKey)
         : base(DEFAULT_MESSAGE_FORMAT_2, resourceName, propertyName, resourceKey)
     {
     }

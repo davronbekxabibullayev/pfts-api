@@ -6,7 +6,9 @@ using Pfts.Infrastucture.Persistence.EntityFramework.Extensions;
 
 public static class DependencyInjectionExtensions
 {
-    public static IServiceCollection AddApplicationInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddApplicationInfrastructure(
+        this IServiceCollection services,
+        IConfiguration configuration)
     {
         services.AddApplicationPersistence(configuration);
 

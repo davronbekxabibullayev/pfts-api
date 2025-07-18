@@ -24,16 +24,9 @@ public static class Roles
     }
 }
 
-public readonly struct RoleInfo
+public readonly struct RoleInfo(Guid id, string name)
 {
-    public RoleInfo(Guid id, string name)
-    {
-        Id = id;
-        Name = name;
-        NormilizedName = name.ToUpper(System.Globalization.CultureInfo.CurrentCulture);
-    }
-
-    public Guid Id { get; }
-    public string Name { get; }
-    public string NormilizedName { get; }
+    public Guid Id { get; } = id;
+    public string Name { get; } = name;
+    public string NormilizedName { get; } = name.ToUpper(System.Globalization.CultureInfo.CurrentCulture);
 }
